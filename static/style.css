@@ -1,0 +1,109 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+body {
+  background-color: #eee;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.height {
+  height: 100vh;
+}
+
+.search {
+  position: relative;
+  box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+}
+
+.search input {
+  height: 60px;
+  text-indent: 25px;
+  border: 2px solid #cdab35;
+}
+
+.search input:focus {
+  box-shadow: none;
+  border: 2px solid #c9b571;
+}
+
+.search .fa-search {
+  position: absolute;
+  top: 20px;
+  left: 16px;
+}
+
+.search button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 50px;
+  width: 110px;
+  background: #cdab35;
+}
+.search button:hover {
+  background: #c9b571;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.chat-box {
+  max-height: 300px; /* Adjust the height as needed */
+  overflow-y: auto;
+  padding: 10px;
+
+}
+
+.chat-bubble {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin: 0; /* Change this to 0 */
+  border-radius: 10px;
+  word-wrap: break-word;
+  
+}
+
+.user {
+  text-align: right;
+  background-color: #F0E68C;
+}
+
+.bot {
+  text-align: left;
+  background-color: #f0f0f0;
+}
+
+
+
+.formal-title {
+  font-size: 46px; /* Adjust the size as needed */
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Add a keyframe animation for the loading dots */
+@keyframes loadingDots {
+  0% {
+    content: "بانتظار الرد";
+  }
+  33% {
+    content: "بانتظار الرد.";
+  }
+  66% {
+    content: "بانتظار الرد..";
+  }
+  100% {
+    content: "بانتظار الرد...";
+  }
+}
+
+.bot.loading::after {
+  content: "بانتظار الرد...";
+  display: inline-block;
+  animation: loadingDots 1s infinite steps(4);
+  text-align: right; /* Align the text to the right */
+  background-color: #f0f0f0;
+  color: #888; /* You can choose a color that indicates loading */
+}
+

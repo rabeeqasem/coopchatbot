@@ -1,0 +1,4 @@
+start_config.py
+*.pickle
+*.npy
+__pycache__
